@@ -1,0 +1,39 @@
+diff --git a/build/index.js b/build/index.js
+index 4403ab4e910c7c934ac7a2c445fe5b9b41f85c8c..e98c5b9d847c74d575c8594e52e230e8dcda72d3 100644
+--- a/build/index.js
++++ b/build/index.js
+@@ -2244,7 +2244,7 @@ function Block(props) {
+       /* @__PURE__ */ jsx27("div", { className: "notion-aside-table-of-contents-header", children: "Table of Contents" }),
+       /* @__PURE__ */ jsx27("nav", { className: "notion-table-of-contents", children: toc.map((tocItem) => {
+-        const id = uuidToId(tocItem.id);
++        const id = tocItem.id ? uuidToId(tocItem.id) : "";
+         return /* @__PURE__ */ jsx27(
+           "a",
+           {
+@@ -2371,7 +2371,7 @@ function Block(props) {
+     ;
+     block.type = "collection_view_page";
+   }
+-  const blockId = hideBlockId ? "notion-block" : `notion-block-${uuidToId2(block.id)}`;
++  const blockId = hideBlockId || !block.id ? "notion-block" : `notion-block-${uuidToId2(block.id)}`;
+   switch (block.type) {
+     case "collection_view_page":
+     // fallthrough
+@@ -2536,7 +2536,7 @@ function Block(props) {
+     case "sub_sub_header": {
+       if (!block.properties) return null;
+       const blockColor = (_e = block.format) == null ? void 0 : _e.block_color;
+-      const id = uuidToId2(block.id);
++      const id = block.id ? uuidToId2(block.id) : "";
+       const title = getTextContent2(block.properties.title) || `Notion Header ${id}`;
+       let indentLevel = tocIndentLevelCache[block.id];
+       let indentLevelClass;
+@@ -2844,7 +2844,7 @@ function Block(props) {
+           children: toc.map((tocItem) => /* @__PURE__ */ jsx30(
+             "a",
+             {
+-              href: `#${uuidToId2(tocItem.id)}`,
++              href: tocItem.id ? `#${uuidToId2(tocItem.id)}` : "#",
+               className: "notion-table-of-contents-item",
+               children: /* @__PURE__ */ jsx30(
+                 "span",

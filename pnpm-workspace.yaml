@@ -1,0 +1,2 @@
+patchedDependencies:
+  react-notion-x@7.4.2: patches/react-notion-x@7.4.2.patch
