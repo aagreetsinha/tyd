@@ -1,8 +1,9 @@
 diff --git a/build/index.js b/build/index.js
-index 4403ab4e910c7c934ac7a2c445fe5b9b41f85c8c..e98c5b9d847c74d575c8594e52e230e8dcda72d3 100644
+index 4403ab4e910c7c934ac7a2c445fe5b9b41f85c8c..740e86c1e3e5f3f1cd4520f29d2a2e09ec301025 100644
 --- a/build/index.js
 +++ b/build/index.js
-@@ -2244,7 +2244,7 @@ function Block(props) {
+@@ -2244,7 +2244,7 @@ function PageAside({
+     hasToc && /* @__PURE__ */ jsxs13("div", { className: "notion-aside-table-of-contents", children: [
        /* @__PURE__ */ jsx27("div", { className: "notion-aside-table-of-contents-header", children: "Table of Contents" }),
        /* @__PURE__ */ jsx27("nav", { className: "notion-table-of-contents", children: toc.map((tocItem) => {
 -        const id = uuidToId(tocItem.id);
