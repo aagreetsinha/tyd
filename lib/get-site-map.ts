@@ -39,20 +39,14 @@ const getPage = async (pageId: string, opts?: any) => {
 
 async function getAllPagesImpl(
   rootNotionPageId: string,
-  rootNotionSpaceId?: string,
-  {
-    maxDepth = 1
-  }: {
-    maxDepth?: number
-  } = {}
+  rootNotionSpaceId?: string
 ): Promise<Partial<types.SiteMap>> {
+  // no maxDepth: the site map needs every page reachable from the root,
+  // regardless of how deeply chapters/lessons are nested in Notion
   const pageMap = await getAllPagesInSpace(
     rootNotionPageId,
     rootNotionSpaceId,
-    getPage,
-    {
-      maxDepth
-    }
+    getPage
   )
 
   const canonicalPageMap = Object.keys(pageMap).reduce(
