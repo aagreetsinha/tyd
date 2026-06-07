@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 0 0% 7%; /* #111111 */
+    --foreground: 0 0% 100%; /* #ffffff */
+    --surface: 0 0% 10%; /* #1a1a1a */
+    --border: 0 0% 13%; /* #222222 */
+    --muted: 0 0% 33%; /* #555555 */
+    --muted-foreground: 0 0% 53%; /* #888888 */
+    --accent: 74 100% 59%; /* #adff2f */
+    --accent-foreground: 0 0% 0%; /* #000000 */
+    --radius: 0.5rem;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
