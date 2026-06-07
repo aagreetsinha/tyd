@@ -1,5 +1,5 @@
-import { IconContext } from 'react-icons'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
+import { IconContext } from 'react-icons'
 
 export default class MyDocument extends Document {
   override render() {

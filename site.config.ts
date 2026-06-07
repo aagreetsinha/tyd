@@ -11,16 +11,16 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'Teach Yourself Design',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
-  author: 'Travis Fischer',
+  domain: 'teachyourselfdesign.com',
+  author: 'Aagreet Sinha',
 
   // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  description: 'A curated learning guide for UI/UX Design. Carefully hand-picked by Aagreet Sinha.',
 
   // social usernames (optional)
-  twitter: 'transitive_bs',
-  github: 'transitive-bullshit',
-  linkedin: 'fisch2',
+  twitter: 'aagreet',
+  github: 'aagreetsinha',
+  linkedin: 'aagreetsinha',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`

@@ -1,6 +1,6 @@
+import * as React from 'react'
 import { FaEnvelopeOpenText, FaGithub, FaLinkedin, FaMastodon, FaTwitter, FaYoutube, FaZhihu } from 'react-icons/fa'
 import { IoMoonSharp, IoSunnyOutline } from 'react-icons/io5'
-import * as React from 'react'
 
 import * as config from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
