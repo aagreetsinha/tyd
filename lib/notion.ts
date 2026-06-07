@@ -44,7 +44,9 @@ const getNavigationLinkPages = pMemoize(
 
 // Notion API v3 wraps records as { spaceId, value: { value: actualData, role } }
 // but react-notion-x@7.4.2 expects { role, value: actualData }. Flatten here.
-function normalizeRecordMap(recordMap: ExtendedRecordMap): ExtendedRecordMap {
+export function normalizeRecordMap(
+  recordMap: ExtendedRecordMap
+): ExtendedRecordMap {
   const keys = [
     'block',
     'collection',
