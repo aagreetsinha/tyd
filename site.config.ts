@@ -4,7 +4,6 @@ export default siteConfig({
   // the site's root Notion page (required)
   rootNotionPageId: 'eb1fbaf480994c9297f3189198e3a402',
 
-
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
@@ -15,7 +14,8 @@ export default siteConfig({
   author: 'Aagreet Sinha',
 
   // open graph metadata (optional)
-  description: 'A curated learning guide for UI/UX Design. Carefully hand-picked by Aagreet Sinha.',
+  description:
+    'A curated learning guide for UI/UX Design. Carefully hand-picked by Aagreet Sinha.',
 
   // social usernames (optional)
   twitter: 'aagreet',
