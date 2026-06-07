@@ -1,3 +1,5 @@
+import { uuidToId } from 'notion-utils'
+
 export interface ChapterMeta {
   index: number
   pageId: string
@@ -116,14 +118,16 @@ export const chapters: ChapterMeta[] = [
 export const TOTAL_CHAPTERS = chapters.length
 
 export function getChapterByPageId(pageId: string): ChapterMeta | undefined {
-  return chapters.find((c) => c.pageId === pageId)
+  const normalized = uuidToId(pageId)
+  return chapters.find((c) => c.pageId === normalized)
 }
 
 export function getAdjacentChapters(pageId: string): {
   prev: ChapterMeta | null
   next: ChapterMeta | null
 } {
-  const idx = chapters.findIndex((c) => c.pageId === pageId)
+  const normalized = uuidToId(pageId)
+  const idx = chapters.findIndex((c) => c.pageId === normalized)
   if (idx === -1) return { prev: null, next: null }
   return {
     prev: idx > 0 ? (chapters[idx - 1] ?? null) : null,
